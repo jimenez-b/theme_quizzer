@@ -1,0 +1,18 @@
+@font-face {
+    font-family: GillSansMTProMedium;
+    src: url([[font:theme|gillsansmtpro-medium-webfont.eot]]);
+    src: url([[font:theme|gillsansmtpro-medium-webfont.eot?#iefix]]) format('embedded-opentype'), url([[font:theme|gillsansmtpro-medium-webfont.woff]]) format('woff'), url([[font:theme|gillsansmtpro-medium-webfont.ttf]]) format('truetype');
+}
+
+@font-face {
+    font-family: GillSansMTProBook;
+    src: url([[font:theme|gillsansmtpro-book-webfont.eot]]);
+    src: url([[font:theme|gillsansmtpro-book-webfont.eot?#iefix]]) format('embedded-opentype'), url([[font:theme|gillsansmtpro-book-webfont.woff]]) format('woff'), url([[font:theme|gillsansmtpro-book-webfont.ttf]]) format('truetype');
+}
+
+
+/**************************** Font Section ****************************/
+
+//$font-default: "GillSansMTProMedium";
+$font-default: arial;
+$font-default-color: $alert-text;

@@ -1,0 +1,53 @@
+/***************** Dashboard Styling *****************/
+
+#page-my-index {
+    .p-3 {
+        background-color: $white
+    }
+    .block .block-cards .icon {
+        display: none;
+    }
+    .block .block-cards .multiline {
+        font-size: 30px !important;
+    }
+    @media (min-width: 1381px) {
+        body.drawer-open-left .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+            width: calc(50% - 30px);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .35);
+            margin-top: 1rem;
+        }
+    }
+    @media (min-width: 1360px) {
+        .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+            width: calc(50% - 30px);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .35);
+            margin-top: 1rem;
+        }
+    }
+    .dashboard-card-deck .dashboard-card .dashboard-card-img {
+        height: 150px;
+    }
+    small,
+    .small {
+        display: none;
+    }
+    #page-content #region-main {
+        .card-title {
+            display: none !important;
+        }
+        .d-inline {
+            display: none !important;
+        }
+    }
+    #page-header {
+        .card-body {
+            background-color: $conu-burgundy !important;
+            padding: 0px !important;
+        }
+        .pb-3,
+        .py-3 {
+            background-color: $conu-burgundy !important;
+            margin-top: 20px;
+        }
+    }
+}

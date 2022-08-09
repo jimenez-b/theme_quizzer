@@ -1,0 +1,34 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Example context (json):
+    {
+        {"record":{
+            "resultrecord":"record",
+            "id":"7",
+            "conquizz_description":"This is the test you need to take in order to achieve that you want <\/strong>to achieve!<\/p>",
+            "conquizz_options":"a b<\/strong> C"
+        }
+    }
+}}
+<div id="exam-description">
+  <span class="h3">{{# str }} examinstr, quizaccess_conquizzer {{/ str }}</span>
+  <hr class="underlined">
+  <p>{{#record}}{{{conquizz_description}}}{{/record}}</p>
+  <span class="h4">Allowed Materials</span>
+  <p>{{#record}}{{{conquizz_options}}}{{/record}}</p>
+</div>

@@ -1,0 +1,67 @@
+/*********************Concordia colors***************************/
+
+$conu-burgundy: #912338 !default;
+$conu-violet: #50368c !default;
+$conu-burgundy-secondary:scale-color($conu-burgundy, $saturation: -60%, $lightness: 26%);
+$conu-white-smoke:lighten($black, 94%) !default;
+
+/*********************Other concordia colors********************/
+
+$conu-blue: #0f6fc5 !default;
+$conu-purple: #613d7c !default;
+$conu-pink: #e83e8c !default;
+$conu-red: #ca3120 !default;
+$conu-orange: #f0ad4e !default;
+$conu-yellow: #ff7518 !default;
+$conu-green: #357a32 !default;
+$conu-cyan: #008196 !default;
+
+/*****************New colors for the question attempt*******************/
+
+
+/*
+$conu-answered:#00747b;
+$conu-unsure: #c9a859;
+$conu-unanswered: #737373;
+$conu-invalidanswer:#ea3815;
+*/
+
+$conu-answered:$conu-green;
+$conu-unsure: $conu-yellow;
+$conu-unanswered: $gray-600;
+$conu-invalidanswer:$conu-red;
+
+/*****************New colors for the question attempt*******************/
+
+$conu-primary: $conu-red !default;
+$warning: $orange !default;
+$danger: $red !default;
+$secondary: $gray-400 !default;
+
+/* SAML Button Color */
+
+$conu-secondary-btn-text: $white;
+$conu-secondary-btn-color: $conu-burgundy;
+$conu-secondary-btn-hover: $conu-burgundy-secondary;
+$conu-secondary-btn-hover-color: $white;
+$bg-burgundy: $conu-burgundy;
+$course-list: $conu-white-smoke;
+$hamburger-white: $white;
+$tint-green: scale-color($conu-green, $hue:-30, $saturation: -1%, $lightness: 80%);
+$tint-mauve: lighten($conu-purple, 53%);
+$tint-magenta: lighten($conu-burgundy, 53%);
+$tint-gold: scale-color($conu-yellow, $hue:5, $saturation: -70%, $lightness: 70%);
+$tint-turquoise: scale-color($blue, $hue:-15, $saturation: -80%, $lightness: 60%);
+$tint-blue: scale-color($blue, $hue:-5, $saturation: -70%, $lightness: 70%);
+// Create variables to override the default value for variables used in the Moodle and Bootstrap SCSS files.
+$nav-bar-bg: $conu-white-smoke;
+$side-nav: $conu-burgundy;
+$alert-prime:scale-color($blue, $saturation: -55%, $lightness: 55%);
+$alert-success:$tint-green;
+$alert-info: scale-color($blue, $saturation: -70%, $lightness: 75%);
+$alert-warning: lighten($conu-burgundy, 53%);
+$alert-text: lighten($black, 17.3%);
+$button-burgundy: $conu-burgundy;
+$button-text: $white;
+$button-burgundy-hover: $conu-burgundy-secondary;
+

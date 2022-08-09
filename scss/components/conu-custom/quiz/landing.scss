@@ -1,0 +1,201 @@
+/*************************** Quiz landing page section ****************************/
+
+#page-mod-quiz-view {
+    .container {
+        display: none;
+    }
+    #page-footer {
+        .bg-dark {
+            background-color: $conu-white-smoke !important;
+        }
+    }
+    header {
+        &#page-header {
+            &.row {
+                display: block;
+                background-color: $conu-violet;
+                height: 100px;
+                margin: 0 -15px 0 -20px;
+                .header-title {
+                    color: $white;
+                    font-family: "GillSansMTProMedium", sans-serif;
+                    font-size: 34px;
+                    letter-spacing: 2px;
+                    margin-top: 4rem;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+    .card-body {
+        background-color: $conu-violet;
+    }
+    .page-context-header {
+        display: none;
+    }
+    #maincontent {
+        height: 5px;
+    }
+    #main.h2 {
+        font-size: 48px;
+        margin-bottom: 4rem;
+        padding-top: 20px;
+    }
+    .col-3 {
+        border: 3px solid $conu-burgundy;
+        text-align: left;
+    }
+    hr {
+        border-top: 3px solid $conu-burgundy;
+        border-radius: 2px;
+    }
+    label {
+        display: inline;
+    }
+    h2,
+    .h2 {
+        font-size: 48px;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    h3,
+    .h3 {
+        text-align: center;
+        margin-top: 5rem;
+    }
+    .accordion>.card>.card-header {
+        border: none;
+        border-color: $conu-burgundy;
+        background-color: $white;
+    }
+    #support-accordion.col-3 {
+        border: solid;
+    }
+    /*.activity-navigation {
+        #prev-activity-link,
+        #next-activity-link {
+            display: none;
+        }
+    }*/
+    //Align text of exam information to the left
+    #exam-verifications {
+        text-align: left;
+    }
+    //Centralize exam instructions and allowed materials
+    .col-9 {
+        text-align: center;
+    }
+    #testdate.text-info {
+        text-align: left;
+    }
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        pointer-events: auto;
+        background-color: $white;
+        background-clip: padding-box;
+        border: 3px solid $conu-burgundy;
+        outline: 0;
+    }
+    .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0.125rem 1rem;
+        border-bottom: 1px solid $conu-burgundy;
+        background-color: $conu-burgundy;
+        color: $white;
+    }
+    .modal {
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        outline: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+    .pt-3,
+    .py-3 {
+        padding-top: .5rem !important;
+        padding-bottom: 0px;
+    }
+    p {
+        text-align: left !important;
+    }
+    .col-10 {
+        border: 0px !important;
+    }
+    @media (min-width: 576px) {
+        #region-main {
+            /*padding-right: 0px !important;*/
+            padding-top: 0px !important;
+            border: 0px !important;
+        }
+    }
+    .breadcrumb {
+        background-color: $white;
+    }
+    .dropdown-menu {
+        &.show {
+            .dropdown-item {
+                &:hover {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+            &#action-menu-2-menu,
+            &#action-menu-3-menu {
+                transform: translate3d(-270px, 25px, 0px) !important;
+                overflow: scroll !important;
+                //block to create the two column menu left commented
+                //transform: translate3d(-32rem, 25px, 0px) !important;
+                //display: grid;
+                //grid-template-columns: 2fr 1fr 2fr;
+                //.divider {
+                //    border-left: 3px solid $conu-burgundy;
+                //    height: auto;
+                //}
+                //end commented to create a two column menu
+            }
+        }
+    }
+    .mod_quiz_preflight_popup {
+        .moodle-dialogue-wrap {
+            padding-bottom: 10px;
+            .moodle-dialogue-hd {
+                background-color: $conu-burgundy;
+                color: $white;
+                font-family: 'GillSansMTProMedium';
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+            .moodle-dialogue-bd {
+                margin-top: 0.5rem;
+                legend {
+                    margin-bottom: 10px;
+                }
+                #id_honestycheckheader {
+                    .fcontainer {
+                        &::before {
+                            content: url([[pix:theme|white]]);
+                            background-image: url([[pix:theme|pix-timer]]);
+                            background-size: cover;
+                            display: inline-block !important;
+                            position: absolute;
+                            left: 40px;
+                            padding-top: 5px;
+                            width: 7.4rem;
+                            height: 8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

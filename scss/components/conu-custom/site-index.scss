@@ -1,0 +1,57 @@
+/*************** Login Page ***********************/
+
+
+/* Secondary SAML2 Button */
+
+#page-site-index {
+    &.bg-full-index {
+        background-image: url([[pix:theme|index]]);
+        -webkit-background-size: cover;
+        background-size: cover;
+        div {
+            &.no-overflow {
+                overflow: initial;
+            }
+            &#page {
+                section {
+                    &#region-main {
+                        border: none !important;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    div {
+        &.no-overflow {
+            overflow: initial;
+        }
+    }
+    /*background-image: url([[pix:theme|login-bg]]);
+    -webkit-background-size: cover;
+    background-size: cover;
+    .btn-primary {
+        color: $white;
+        background-color: $gray-600;
+        border-color: $gray-600;
+        &:hover,
+        &:focus {
+            background-color: $gray-700;
+            border-color: $gray-700;
+        }
+    }*/
+    .h2 {
+        &.card-header {
+            &:before {
+                display: block;
+                content: "";
+                background-image: url([[pix:theme|logo]]);
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-background-size: contain;
+                background-size: contain;
+                height: 120px;
+            }
+        }
+    }
+}

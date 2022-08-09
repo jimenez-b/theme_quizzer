@@ -1,0 +1,85 @@
+/*************** Login Page ***********************/
+
+
+/* Secondary SAML2 Button */
+
+#page-login-index {
+    background-image: url([[pix:theme|login-bg]]);
+    -webkit-background-size: cover;
+    background-size: cover;
+    .btn-primary {
+        color: $white;
+        background-color: $gray-600;
+        border-color: $gray-600;
+        &:hover,
+        &:focus {
+            background-color: $gray-700;
+            border-color: $gray-700;
+        }
+    }
+    .h2 {
+        &.card-header {
+            &:before {
+                display: block;
+                content: "";
+                background-image: url([[pix:theme|logo]]);
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-background-size: contain;
+                background-size: contain;
+                height: 120px;
+            }
+        }
+    }
+    h3 {
+        &.h6 {
+            &.mt-2 {
+                font-weight: 700;
+                font-size: 1em;
+            }
+        }
+    }
+    h6 {
+        font-weight: bold;
+        font-size: 1.0em;
+    }
+    .potentialidplist {
+        .potentialidp {
+            img {
+                display: none;
+            }
+        }
+    }
+    .btn-secondary {
+        color: $conu-secondary-btn-text;
+        background-color: $conu-secondary-btn-color;
+        border-color: $conu-secondary-btn-color;
+        &:hover,
+        &:focus {
+            color: $conu-secondary-btn-hover-color;
+            background-color: $conu-secondary-btn-hover;
+            border-color: $conu-secondary-btn-hover;
+        }
+    }
+    form {
+        &#login {
+            &:before {
+                content: 'Non-Concordia user login:';
+                font-weight: bold;
+            }
+        }
+    }
+    /* Reverse Login forms - Thanks Andrei */
+    .card-block {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
+    @media (max-width: 768px) {
+        .card-block {
+            .row {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

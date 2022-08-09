@@ -1,0 +1,372 @@
+/****************Rules taken from raw scss field*******************/
+
+
+/*and*/
+
+
+/*************************** Common styling ****************************/
+
+body {
+    font-family: $font-default;
+    color: $font-default-color;
+    background-color: $white !important;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.list-group-item {
+    top: -1px;
+    &.active {
+        background-color: $side-nav;
+        border-color: $side-nav;
+        &:hover {
+            z-index: 2;
+            background-color: $button-burgundy-hover;
+            border-color: $button-burgundy-hover;
+        }
+    }
+}
+
+.alert-primary {
+    color: $alert-text !important;
+    background-color: $alert-prime;
+}
+
+.alert-success {
+    color: $alert-text !important;
+    background-color: $alert-success;
+    border-color: $alert-success;
+}
+
+.alert-info {
+    color: $alert-text !important;
+    background-color: $alert-info;
+    border-color: $alert-info;
+}
+
+.alert-warning {
+    color: $alert-text !important;
+    background-color: $alert-warning;
+    border-color: $alert-warning;
+}
+
+.alert-error {
+    color: $alert-text !important;
+}
+
+.alert-danger {
+    color: $alert-text !important;
+}
+
+.btn-primary {
+    color: $button-text;
+    background-color: $button-burgundy;
+    border-color: $button-burgundy;
+    &:not(:disabled):not(.disabled):active {
+        color: $button-text;
+        background-color: $button-burgundy;
+        border-color: $button-burgundy;
+    }
+}
+
+.bg-dark {
+    background-color: $bg-burgundy !important;
+}
+
+.bg-gray-100 {
+    background-color: $gray-100 !important;
+}
+
+.bg-gray-200 {
+    background-color: $gray-200 !important;
+}
+
+.bg-gray-300 {
+    background-color: $gray-300 !important;
+}
+
+.bg-gray-400 {
+    background-color: $gray-400 !important;
+}
+
+.bg-gray-500 {
+    background-color: $gray-500 !important;
+}
+
+.bg-gray-600 {
+    background-color: $gray-600 !important;
+}
+
+.bg-gray-700 {
+    background-color: $gray-700 !important;
+}
+
+.bg-gray-800 {
+    background-color: $gray-800 !important;
+}
+
+.bg-gray-900 {
+    background-color: $gray-900 !important;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.courses {
+    .coursebox {
+        &.even {
+            background-color: $course-list;
+        }
+    }
+}
+
+button {
+    &.bg-gray {
+        background-color: $hamburger-white !important;
+        border-color: $hamburger-white !important;
+        &:hover,
+        &:focus {
+            background-color: $hamburger-white !important;
+            border-color: $hamburger-white !important;
+        }
+    }
+}
+
+.navbar {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+    a,
+    .icon {
+        color: #495057 !important;
+    }
+}
+
+.text-info {
+    color: $alert-text !important;
+}
+
+.card-body {
+    a {
+        margin-bottom: 10px !important;
+    }
+}
+
+.card {
+    background-color: $conu-white-smoke;
+    border: none;
+}
+
+.dropdown-item {
+    &:active {
+        background-color: $black;
+    }
+    &:active,
+    &:focus,
+    &:focus-within,
+    &:hover {
+        a {
+            color: $gray-900;
+        }
+    }
+    &:hover,
+    &:focus {
+        background-color: $conu-burgundy !important;
+        i.icon,
+        span {
+            color: $gray-100 !important;
+        }
+    }
+    &:not(:disabled):not(.disabled):active {
+        background-color: $white;
+        color: $black
+    }
+    &.active {
+        background-color: $conu-burgundy!important;
+    }
+}
+
+div {
+    &.forgetpass,
+    &.logininfo {
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "GillSansMTProBook", sans-serif;
+    font-weight: 700;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.generaltable {
+    th,
+    td {
+        font-size: large;
+    }
+}
+
+.answer {
+    .w-100 {
+        width: auto !important;
+    }
+}
+
+nav {
+    &.navbar {
+        min-height: 72px;
+        max-height: 72px;
+        padding: 3px 14px;
+        -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+        /*display: block;*/
+    }
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.activity-navigation {
+    #prev-activity-link,
+    #next-activity-link {
+        display: none;
+    }
+}
+
+#nav-drawer {
+    margin-top: 15px;
+    background-color: $nav-bar-bg;
+}
+
+#jump-to-activity.custom-select {
+    display: none;
+}
+
+.que span.qno {
+    display: block;
+    font-size: 46px;
+    font-weight: bold;
+    Position: relative;
+    bottom: -10px;
+}
+
+.red,
+.notifyproblem {
+    color: $conu-burgundy;
+}
+
+.h6.strong.centered.red::after {
+    content: ':     ';
+}
+
+#testdate.info {
+    margin-bottom: 1rem;
+}
+
+#testopen.info {
+    margin-bottom: 1rem;
+}
+
+#testduration.info {
+    margin-bottom: 5rem;
+}
+
+.col-3 {
+    height: 35rem;
+    border-color: $conu-burgundy !important;
+    background-color: $white;
+}
+
+.homelink {
+    display: none;
+}
+
+.sitelink {
+    display: none;
+}
+
+.btn-secondary {
+    color: $white;
+    background-color: $conu-burgundy;
+    border-color: $white;
+}
+
+.pe-none {
+    pointer-events: none;
+}
+
+.mx-w-inh {
+    max-width: inherit;
+}
+
+.small-60 {
+    font-size: 60%;
+}
+
+#page {
+    margin-top: 50px;
+}
+
+.toast-body {
+    margin-top: 50px;
+}
+
+.que .content .formulation {
+    color: $black !important;
+}
+
+.notifytiny.debuggingmessage {
+    margin-top: 100px;
+}
+
+div#dndupload-status {
+    z-index: 2000;
+}
+
+
+/************************* Styles for the chat tab **************************/
+
+.LPMain_container {
+    z-index: 999999 !important;
+    position: fixed !important;
+    right: -2%!important;
+    top: 50% !important;
+    .LPMcontainer.LPMoverlay {
+        width: 160px !important;
+        height: 40px !important;
+        border-radius: 7px !important;
+        transform: rotate(-90deg);
+        .LPMlabel {
+            position: relative !important;
+            top: 10px !important;
+            left: 25px !important;
+        }
+    }
+}
+
+body.mobiletheme {
+    .LPMain_container {
+        display: none;
+    }
+}

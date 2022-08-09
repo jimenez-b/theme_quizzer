@@ -1,0 +1,64 @@
+// Import FontAwesome.
+@import "fontawesome";
+// Import All of Bootstrap
+@import "bootstrap";
+// Import Core moodle CSS
+@import "moodle";
+// Preset CSS
+
+/*********************Default imports ***************************/
+
+@import "components/defaults/default-variables";
+@import "components/defaults/default-rules";
+
+/*********************Concordia customizations*******************/
+
+
+/*********************Concordia imports *************************/
+
+@import "components/conu-custom/conu-colors";
+@import "components/conu-custom/fonts";
+
+/*************************** Rules section ****************************/
+
+@import "components/conu-custom/general";
+@import "components/conu-custom/login";
+@import "components/conu-custom/site-index";
+@import "components/conu-custom/dashboard";
+@import "components/conu-custom/topics";
+
+/*************************** Quiz section ****************************/
+
+@import "components/conu-custom/quiz/landing";
+@import "components/conu-custom/quiz/attempt";
+
+/*************************** Attempt section ****************************/
+
+.dropdown-item {
+    background-color: $white !important;
+}
+
+.navbar .dropdown-toggle::after {
+    color: $white;
+    margin-left: 3px;
+    vertical-align: 0;
+    content: "";
+    border-top: .3em solid;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.col-10 {
+    border: 0px !important;
+}
+
+body.jsenabled .questionflag input[type=checkbox] {
+    display: initial !important;
+}
+
+@import "components/conu-custom/quiz/timer";
+@import "components/conu-custom/quiz/common";
+@import "components/conu-custom/quiz/review";
+@import "components/conu-custom/quiz/summary";
+@import "components/conu-custom/quiz/mod";
+@import "components/conu-custom/quiz/edit";

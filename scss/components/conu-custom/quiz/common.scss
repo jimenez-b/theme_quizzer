@@ -1,0 +1,137 @@
+body[id^='page-mod-quiz-'] {
+    .question_key {
+        border-top: 1px solid $gray-200;
+        margin: 25px 8px;
+        >span {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 500;
+            display: block;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            li {
+                span {
+                    position: relative;
+                    display: block;
+                    padding: 4px 0;
+                    padding-left: 23px;
+                    line-height: 16px;
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 3px;
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        content: "";
+                        border-radius: 2px;
+                    }
+                    &.answered:before,
+                    &.correct:before {
+                        background-color: $conu-answered;
+                    }
+                    &.unsure:before,
+                    &.partiallycorrect:before {
+                        background-color: $conu-unsure;
+                    }
+                    &.unanswered:before,
+                    &.notanswered:before {
+                        background-color: $conu-unanswered;
+                    }
+                    &.invalidanswer:before,
+                    &.invalidanswerhybrid:before,
+                    &.incorrect:before {
+                        background-color: $conu-invalidanswer;
+                    }
+                    &.gradingrequired:before {
+                        background-color: $gray-400;
+                    }
+                }
+            }
+        }
+    }
+    .exam-modal {
+        margin: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 2000;
+        background-color: $white;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        &.exam-modal-show {
+            visibility: visible;
+        }
+        .exam-modal-parent {
+            .exam-modal-head {
+                padding-top: 1rem;
+                .exam-modal-header {
+                    font-size: 3rem;
+                }
+            }
+            @media (min-width: 768px) {
+                .exam-modal-head {
+                    padding-top: 8rem;
+                    .exam-modal-header {
+                        font-size: 48px;
+                    }
+                    .exam-modal-hr {
+                        height: 4px;
+                        background-color: $white;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .exam-modal-body {
+            text-align: center;
+            position: relative;
+            top: 40px;
+            .exam-modal-icon {
+                .fa-stack {
+                    width: 14rem;
+                    height: 14rem;
+                    line-height: 14rem;
+                    color: $conu-answered;
+                    .fa-stack-2x {
+                        font-size: 14rem;
+                    }
+                    .fa-stack-1x {
+                        font-size: 7rem;
+                    }
+                }
+            }
+            .exam-modal-text {
+                margin-top: 16px;
+                font-size: 20px;
+                padding: 0 2rem;
+            }
+            @media (min-width: 576px) {
+                .exam-modal-text {
+                    max-width: 650px;
+                    margin: 0 auto;
+                }
+            }
+            @media (min-width: 992px) {
+                .exam-modal-text {
+                    max-width: 780px;
+                }
+            }
+            .exam-modal-extra-text {
+                margin-top: 16px;
+                font-size: 20px;
+                display: none;
+            }
+        }
+    }
+}

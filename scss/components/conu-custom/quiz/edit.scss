@@ -1,0 +1,25 @@
+/*************************** Quiz edit page section ****************************/
+
+#page-mod-quiz-edit {
+    header {
+        &#page-header {
+            &.row {
+                display: block;
+                background-color: $conu-burgundy;
+                height: 100px;
+                margin: 0 -15px 0 -20px;
+                .header-title {
+                    color: $white;
+                    font-family: "GillSansMTProMedium", sans-serif;
+                    font-size: 34px;
+                    letter-spacing: 2px;
+                    margin-top: 4rem;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+    .breadcrumb {
+        background-color: $white;
+    }
+}
