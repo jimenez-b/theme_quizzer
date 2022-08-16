@@ -1,23 +1,64 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable require-jsdoc */
-define([], function() {
+/* eslint-disable max-len */
+/* eslint-disable no-console */
 
-    return {
-        init: function() {
-            // Put whatever you like here. $ is available
-            // to you as normal.
-            /*
-            var w = window.innerWidth;
-            w = w * 0.065;
-            // Style the number of columns for the textarea
-            $('#page-mod-quiz-attempt textarea.notecontent').attr('cols', w);
-            $(window).resize(function() {
-                var w = window.innerWidth;
-                w = w * 0.065;
-                // Style the number of columns for the textarea
-                $('#page-mod-quiz-attempt textarea.notecontent').attr('cols', w);
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * AMD module to create a modal to make images in a quiz fullscreen.
+ *
+ * @module     theme/quizzer
+ * @package    theme_quizzer
+ * @copyright  2022 onwards Brandon Jimenez <brandon.jimenez@concordia.ca>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+
+define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
+    var selector = '#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img';
+    // Q document.querySelectorAll('#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img').forEach((item) => {
+    document.querySelectorAll(selector).forEach((item) => {
+        item.addEventListener('click', (event) => {
+            var clickedLink = event.currentTarget;
+            console.log('clicked: ' + clickedLink.id);
+            console.log('clicked: ' + clickedLink.alt);
+            ModalFactory.create({
+                    title: clickedLink.alt,
+                    body: '<div class="modal-enlarged-image">' + clickedLink.outerHTML + '</div>',
+                    classes: [{
+                        classes: "modal-enlarged-container"
+                    }],
+                })
+                .done(function(modal) {
+                    modal.setLarge();
+                    modal.show();
+                });
+        });
+    });
+    /* $('#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img').on('click', function() {
+        // Q var clickedLink = $(e.currentTarget);
+        ModalFactory.create({
+                title: 'test title',
+                body: '<p>test body content</p>',
+                footer: 'test footer content',
+            })
+            .done(function(modal) {
+                modal.show();
             });
-            */
-        }
-    };
+    });*/
+
 });

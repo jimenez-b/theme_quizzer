@@ -505,7 +505,7 @@ class theme_quizzer_mod_quiz_renderer extends mod_quiz_renderer {
 
         $output .= $this->connection_warning();
 
-        $output .= $this->page->requires->js_call_amd('theme_quizzer/attempt','init');
+        $output .= $this->page->requires->js_call_amd('theme_quizzer/attempt');
 
         return $output;
     }
