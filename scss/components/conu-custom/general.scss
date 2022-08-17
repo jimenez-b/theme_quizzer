@@ -370,3 +370,33 @@ body.mobiletheme {
         display: none;
     }
 }
+
+
+/************************* Restilyng the atto buttons **************************/
+
+div.editor_atto_toolbar {
+    /*display: block;*/
+    background: #ced4da;
+    /*min-height: 40px;
+    border: 2px solid #ced4da;
+    width: 100%;*/
+    div.atto_group {
+        border-radius: 0px;
+        border: 1px solid #ced4da;
+        button {
+            padding: 5px 10px;
+            &.highlight,
+            &:hover {
+                background-color: $conu-blue !important;
+                background-image: none;
+                .icon {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.form-control {
+    border-radius: 0;
+}
