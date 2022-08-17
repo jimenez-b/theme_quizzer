@@ -375,15 +375,14 @@ body.mobiletheme {
 /************************* Restilyng the atto buttons **************************/
 
 div.editor_atto_toolbar {
-    /*display: block;*/
     background: #ced4da;
-    /*min-height: 40px;
-    border: 2px solid #ced4da;
-    width: 100%;*/
     div.atto_group {
         border-radius: 0px;
         border: 1px solid #ced4da;
         button {
+            &:focus {
+                outline: 2px solid -webkit-focus-ring-color;
+            }
             padding: 5px 10px;
             &.highlight,
             &:hover {
