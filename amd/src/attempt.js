@@ -28,14 +28,11 @@
  */
 
 
-define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
+define(['core/modal_factory'], function(ModalFactory) {
     var selector = '#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img';
-    // Q document.querySelectorAll('#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img').forEach((item) => {
     document.querySelectorAll(selector).forEach((item) => {
         item.addEventListener('click', (event) => {
             var clickedLink = event.currentTarget;
-            console.log('clicked: ' + clickedLink.id);
-            console.log('clicked: ' + clickedLink.alt);
             ModalFactory.create({
                     title: clickedLink.alt,
                     body: '<div class="modal-enlarged-image">' + clickedLink.outerHTML + '</div>',
@@ -49,16 +46,5 @@ define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
                 });
         });
     });
-    /* $('#page-mod-quiz-attempt #page-wrapper #page #region-main .que:not(.informationitem) .content .formulation .qtext img').on('click', function() {
-        // Q var clickedLink = $(e.currentTarget);
-        ModalFactory.create({
-                title: 'test title',
-                body: '<p>test body content</p>',
-                footer: 'test footer content',
-            })
-            .done(function(modal) {
-                modal.show();
-            });
-    });*/
 
 });
