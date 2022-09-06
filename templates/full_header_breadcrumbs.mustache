@@ -65,6 +65,6 @@
     </div>
 </header>
 
-<div id="page-navbar" {{#navdrawershow}}class="d-none" {{/navdrawershow}}>
+<div id="page-navbar" {{^navdrawershow}}class="d-none" {{/navdrawershow}}>
     {{{output.navbar}}}
 </div>
