@@ -23,35 +23,52 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-
+GLOBAL $DB;
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
 
 //is the user is a siteadmin makes it true
 $isadmin = (is_siteadmin($USER->id)) ? true : false ;
-//$isadmin = false;
 
 //$navdrawershow = (user_has_role_assignment($USER->id,5)) ? false : true ;
+// RFC 26382 - fix to address breadcrumbs not showing for system-wide roles
+// on certain pages
 $navdrawershow = false;
+// 1. we verify if the user is a site admin and if so, we show
+if ($isadmin == true){
+    $navdrawershow = true;
+} 
+else{
+    // 2. we fetch the role assignments for the system context 
+    $ras = $DB->get_record('role_assignments', array('userid'=>$USER->id, 'contextid'=>1));
+    // 3. if the user has any system context roles, we show
+    if ($ras){
+        $navdrawershow = true;
+    } else {
+        // 4. the original validation, we check on the current course
+        $context = context_course::instance($COURSE->id);
 
-$context = context_course::instance($COURSE->id);
-
-$reflection = new ReflectionClass($context);
-$property = $reflection->getProperty('_id');
-$property->setAccessible(true);
-$contextid = $property->getValue($context);
-
-$ras = get_user_roles($context, $USER->id);
-foreach($ras as $role){
-    $role_cid = strval($contextid);
-    if($role->contextid == $role_cid){
-        //assuming student role is default value of 5
-        if ($role->roleid != 5){
-            $navdrawershow = true;
+        $reflection = new ReflectionClass($context);
+        $property = $reflection->getProperty('_id');
+        $property->setAccessible(true);
+        $contextid = $property->getValue($context);
+        // 5. we fetch all the roles a user has in the current context(course)
+        $ras = get_user_roles($context, $USER->id);
+        // 6. we verify vs each role, and if the user has one role
+        // different than a student, it shows
+        // e.g. a student should not see the breadcrumbs but
+        // a student that is also a teacher assistant should.
+        foreach($ras as $role){
+            $role_cid = strval($contextid);
+            if($role->contextid == $role_cid){
+                //assuming student role is default value of 5
+                if ($role->roleid != 5){
+                    $navdrawershow = true;
+                }
+            }
         }
     }
 }
-
 //$navdrawershow = false;
 
 if (isloggedin() && $navdrawershow == true) {
