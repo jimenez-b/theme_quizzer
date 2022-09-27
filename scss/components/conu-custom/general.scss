@@ -14,19 +14,6 @@ body {
     line-height: 28px;
 }
 
-.list-group-item {
-    top: -1px;
-    &.active {
-        background-color: $side-nav;
-        border-color: $side-nav;
-        &:hover {
-            z-index: 2;
-            background-color: $button-burgundy-hover;
-            border-color: $button-burgundy-hover;
-        }
-    }
-}
-
 .alert-primary {
     color: $alert-text !important;
     background-color: $alert-prime;
@@ -257,6 +244,40 @@ nav {
 #nav-drawer {
     margin-top: 15px;
     background-color: $nav-bar-bg;
+    padding: 20px 0px;
+    nav.list-group {
+        border-radius: 0;
+        ul {
+            margin-bottom: 10px;
+            .list-group-item {
+                top: -1px;
+                border: 0;
+                background-color: $nav-bar-bg;
+                transition: 0.3s;
+                &:hover,
+                &:focus {
+                    background-color: $gray-500;
+                }
+                &.active {
+                    /*background-color: $side-nav;
+                    border-color: $side-nav;*/
+                    border-left: 5px solid $conu-burgundy;
+                    background-color: $white;
+                    color: $gray-700;
+                    box-shadow: 0px 0 3px $gray-800;
+                    z-index: 10;
+                    .icon {
+                        color: $conu-burgundy;
+                    }
+                    &:hover {
+                        z-index: 2;
+                        background-color: $button-burgundy-hover;
+                        border-color: $button-burgundy-hover;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #jump-to-activity.custom-select {
