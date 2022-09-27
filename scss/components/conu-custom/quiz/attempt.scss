@@ -112,10 +112,10 @@
             #region-main {
                 .progress {
                     display: flex;
-                    height: 20px;
+                    height: 23px;
                     overflow: hidden;
                     font-size: 14px;
-                    background-color: $gray-700;
+                    background-color: $gray-400;
                     border-radius: .25rem;
                     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
                     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
@@ -128,7 +128,7 @@
                         color: $conu-answered;
                         text-align: center;
                         background-color: $conu-answered;
-                        border-radius: 0 20px 20px 0;
+                        border-radius: 0 .25rem .25rem 0;
                         -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
                         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
                     }
