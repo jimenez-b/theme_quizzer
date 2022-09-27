@@ -22,42 +22,69 @@
         background-color: $conu-burgundy;
     }
     #help-section {
-        .col-2 {
-            padding: 1.25rem;
-        }
-        p {
-            color: $white;
-            background-color: $conu-burgundy;
-        }
-        .card-body {
-            background-color: $conu-burgundy;
-        }
-    }
-    .card {
+        padding: 10px;
+        padding-top: 35px;
+        /*border: solid 1px $conu-burgundy;
+        border-top: none;
+        border-bottom: none;*/
         background-color: $white;
-        border-bottom: solid 1px $conu-burgundy;
-    }
-    .card-header {
-        padding: 0rem 1.25rem;
-        margin-bottom: 0;
-        background-color: $white;
-        border-bottom: none;
-        text-align: left;
-        margin-left: -10px;
+        .card {
+            background-color: $white;
+            /*border-bottom: solid 1px $conu-burgundy;*/
+            border: solid 1px $gray-500;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            & .card-header {
+                padding: 0.4rem 1.25rem;
+                margin-bottom: 0;
+                /*background-color: $white;*/
+                background-color: $gray-200;
+                border-bottom: none;
+                text-align: left;
+                margin-left: -10px;
+                button {
+                    width: 100%;
+                    text-align: left;
+                    font-weight: 600;
+                    color: $conu-burgundy;
+                    i.fa-minus-circle,
+                    &[aria-expanded=false] i.fa-minus-circle {
+                        display: none;
+                    }
+                    &[aria-expanded=true] i.fa-plus-circle {
+                        display: none;
+                    }
+                    &[aria-expanded=true] i.fa-minus-circle {
+                        display: inline-block;
+                    }
+                }
+            }
+            &:has(.show) {
+                & .card-header {
+                    background-color: $gray-500;
+                    background-color: $conu-blue;
+                    background-color: $conu-purple;
+                    button {
+                        color: $white;
+                    }
+                }
+            }
+            .card-body {
+                /*background-color: $conu-burgundy;*/
+                background-color: $gray-100;
+                p {
+                    /*color: $white;*/
+                    color: $gray-900;
+                }
+            }
+        }
+        #support-phone p {
+            color: $black;
+            background-color: $white !important;
+        }
     }
     .accordion>.card>.card-header {
         margin-bottom: 20px;
-    }
-    .col-2 {
-        padding: 10px;
-        padding-top: 35px;
-        border: solid 1px $conu-burgundy;
-        border-top: none;
-        background-color: $white;
-    }
-    #support-phone p {
-        color: $black;
-        background-color: $white !important;
     }
     hr {
         border-top: none;
@@ -76,5 +103,23 @@
     }
     .breadcrumb {
         display: none;
+    }
+    .activity {
+        img.activityicon {
+            vertical-align: middle;
+            width: 45px;
+            height: auto;
+            background-color: $white;
+            border-radius: 5px;
+            padding: 5px;
+            border: 2px solid $conu-blue;
+            transition: 0.3s;
+            &:hover {
+                background-color: $conu-blue;
+            }
+        }
+        .instancename {
+            font-weight: 600;
+        }
     }
 }
