@@ -56,8 +56,8 @@ $string['lastautosave'] = "Last saved: ";
 
 //Footer strings
 $string['footercopyright'] = "© Concordia University";
-$string['footerfaq']       = "Visit concordia.ca/cole for Frequently Asked Questions about the COLE exam site as well as tutorial videos covering its many features";
-$string['footersupport']   = "Having technical difficulties during an exam? Call <strong>1-888-202-8615</strong> for support.";
+$string['footerfaq']       = "Visit <strong><a href='https://concordia.ca/cole' target='_blank'>concordia.ca/cole</a></strong> for Frequently Asked Questions about the COLE exam site as well as tutorial videos covering its many features";
+$string['footersupport']   = "Having technical difficulties during an exam? Call <strong><a href='tel:+18882028615'>1-888-202-8615</a></strong> for support.";
 
 $string['unsureattempt'] = 'Unsure';
 
