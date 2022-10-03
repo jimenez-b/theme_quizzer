@@ -15,12 +15,19 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 <div id="exam-verifications">
-  <form >
-    <input type="checkbox" id="instructions_verification" name="instructions_verification" value="instructions_verification">
-    <label class="small" for="instructions_verification">{{# str }} instructions, quizaccess_conquizzer {{/ str }}</label><br>
-    <input type="checkbox" id="copyrightnotice" name="copyrightnotice" value="copyrightnotice">
-    <label class="small" for="copyrightnotice">{{# str }} copyrightnotice, quizaccess_conquizzer {{/ str }}</label><br>
+  <form class="form-custom-check">
+    <label class="small label-custom-checkbox" for="instructions_verification">
+      <input type="checkbox" id="instructions_verification" name="instructions_verification" value="instructions_verification">
+      {{# str }} instructions, theme_quizzer {{/ str }}
+    </label>
+    <br>
+    
+    <label class="small label-custom-checkbox" for="copyrightnotice">
+      <input type="checkbox" id="copyrightnotice" name="copyrightnotice" value="copyrightnotice">
+      {{# str }} copyrightnotice, theme_quizzer {{/ str }}
+    </label>
+    <br>
     <!--input type="submit" value="Submit"-->
   </form>
-  <p class="small strong">{{# str }} obligatoryapproval, quizaccess_conquizzer {{/ str }}</p>
+  <p class="small strong">{{# str }} obligatoryapproval, theme_quizzer {{/ str }}</p>
 </div>

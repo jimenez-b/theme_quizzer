@@ -57,7 +57,7 @@ $string['lastautosave'] = "Last saved: ";
 //Footer strings
 $string['footercopyright'] = "© Concordia University";
 $string['footerfaq']       = "Visit <strong><a href='https://concordia.ca/cole' target='_blank'>concordia.ca/cole</a></strong> for Frequently Asked Questions about the COLE exam site as well as tutorial videos covering its many features";
-$string['footersupport']   = "Having technical difficulties during an exam? Call <strong><a href='tel:+18882028615'>1-888-202-8615</a></strong> for support.";
+$string['footersupport']   = "Having technical difficulties during an exam?";
 
 $string['unsureattempt'] = 'Unsure';
 
@@ -98,6 +98,38 @@ $string['invalidsummaryhybridbutton'] = 'Incomplete/ To upload';
 //landing quiz
 $string['testattempts'] = 'Attempts allowed';
 
+/**
+ * strings copied from conquizzer plugin to keep theme related stuff in the appropriate place
+ */
+//aside
+$string['support'] = "Support";
+$string['technicaldifficultieshdr'] = "Technical difficulty?";
+$string['technicaldifficulties'] = "Use the <strong>Exam Support</strong> chat button on the right of your screen to contact COLE support or call the toll free number at the bottom of the page.";
+$string['proctorioissueshdr'] = "Proctorio issues?";
+$string['proctorioissues'] = "First use the <strong>Exam Support</strong> chat button on the right of your screen to contact COLE support. If they direct you to Proctorio support, click the Proctorio shield icon in your browser (upper right) to access Proctorio live chat.";
+$string['questionsinstructorhdr'] = "Questions for your instructor";
+$string['questionsinstructor'] = "Use the <strong>Exam Support</strong> chat button on the right of your screen to contact COLE support. They will connect you with your instructor.";
+$string['acsdaccomodationshdr'] = "ACSD accommodations";
+$string['acsdaccomodations'] = "If you are eligible for extended time, your exam time has been configured and verified by the COLE exam team and ACSD.";
+$string['chinaoriranhdr'] = "Writing from China or Iran";
+$string['chinaoriran'] = "If your exam is proctored, make sure you are not connected with VPN. VPN is not compatible with proctored exams.";
+
+//checkboxes
+$string['instructions'] = "I have read the instructions completely";
+$string['copyrightnotice'] = 'I understand the <a href="#" data-toggle="modal" data-target="#copyright-modal">Copyright notice</a> and <a href="#" data-toggle="modal" data-target="#terms-modal">Terms and Conditions</a>';
+$string['obligatoryapproval'] = 'You must approve both checkboxes';
+
+//quiz info
+$string['testdate']     = 'Date';
+$string['testopen']     = 'Exam Opens';
+$string['testduration'] = 'Duration';
+$string['testnotset']   = 'Not yet available';
+
+$string['supportphone'] = 'Call <strong><a href="tel:+18882028615">1-888-202-8615</a></strong> for support';
+
+/**
+ * end strings copied
+ */
 //review page 
 $string['modaltext'] = 'Your exam has been submitted successfully for marking. Please wait for a few seconds, and you will be returned to the exam cover page.';
 $string['modaltextextra'] = 'We are having difficulty closing your exam, please notify an invigilator.';

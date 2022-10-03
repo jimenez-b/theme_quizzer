@@ -27,6 +27,8 @@ include_once($CFG->dirroot . "/mod/quiz/renderer.php");
 include_once($CFG->dirroot . "/question/engine/renderer.php");
 include_once($CFG->dirroot . "/lib/outputrenderers.php");
 
+use core_course\external\course_summary_exporter;
+
 // Import the hybrid question info block.
 use local_qrsub\local\qrsub_attempt_info_block;
 
@@ -135,7 +137,7 @@ class theme_quizzer_mod_quiz_renderer extends mod_quiz_renderer {
      * Generates the view page
      *
      * @param int $course The id of the course
-     * @param array $quiz Array conting quiz data
+     * @param obj $quiz Object containing quiz data
      * @param int $cm Course Module ID
      * @param int $context The page context ID
      * @param array $infomessages information about this quiz
@@ -146,43 +148,42 @@ class theme_quizzer_mod_quiz_renderer extends mod_quiz_renderer {
      *      attempt this quiz now, if appicable this quiz
      */
     public function view_page($course, $quiz, $cm, $context, $viewobj) {
-        global $USER;
+        global $USER,$OUTPUT;
         $output = '';
         $results = $this->quiz_description($quiz);
-
+        
         //variables
-        $timeopen  = ($quiz->timeopen != 0) ? date('D, F d,Y', $quiz->timeopen):get_string('testnotset', 'quizaccess_conquizzer');
-        $houropen  = ($quiz->timeopen != 0) ? date('h:i a', $quiz->timeopen):get_string('testnotset', 'quizaccess_conquizzer');
+        $timeopen  = ($quiz->timeopen != 0) ? date('D, F d,Y', $quiz->timeopen):get_string('testnotset', 'theme_quizzer');
+        $houropen  = ($quiz->timeopen != 0) ? date('h:i a', $quiz->timeopen):get_string('testnotset', 'theme_quizzer');
         $timelimit = ($quiz->timelimit != 0) 
             ? ( ($quiz->timelimit >= 3600 ) 
                 ? floor($quiz->timelimit / 3600)." hr. ".(($quiz->timelimit / 60) % 60)." min. " 
                 : (($quiz->timelimit / 60) % 60)." min. ")
-            : get_string('testnotset', 'quizaccess_conquizzer');
+            : get_string('testnotset', 'theme_quizzer');
 
         //modifications to conform to proposed mock-up
-        $output .= $this->heading(format_string($quiz->name));
+        
+        //$imagetoshow = course_summary_exporter::get_course_image($course);
+        //if (!$imagetoshow) {
+        //    $imagetoshow = $OUTPUT->get_generated_image_for_id($course->id);
+        //}
+        //$output .= html_writer::start_tag('div', array('id' =>'container-heading', 'class'=>'custom-container','style' =>'background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('.$imagetoshow.');'));
+        $output .= $this->heading(format_string($quiz->name),2,array('class'=>'custom-landing-header'));
+        //$output .= html_writer::end_tag('div');
 
-        $output .= html_writer::start_tag('div', array('class'=>'row', 'id'=>'upper-content'));
+        $output .= html_writer::start_tag('div', array('class'=>'row centered col-10', 'id'=>'upper-content'));
         
         $output .= html_writer::start_tag('div', array('id' =>'concordia-left', 'class'=>'col-6'));
-        //$output .= html_writer::start_tag('div', array('id' =>'concordia-left', 'class'=>'col-9 row'));
-        //$output .= html_writer::start_tag('div', array('id' =>'support-accordion', 'class'=>'col-3'));
-        //$output .= $this->render_from_template('theme_quizzer/help', '');
-        //$output .= html_writer::end_tag('div');
-        //$output .= html_writer::start_tag('div', array('id' =>'exam-info', 'class'=>'col-9'));
         $output .= $this->render_from_template('theme_quizzer/description', $this->quiz_description($quiz));
-        //$output .= html_writer::end_tag('div');
         $output .= html_writer::end_tag('div');
         $output .= html_writer::start_tag('div', array('id' =>'concordia-right', 'class'=>'col-6'));
         $output .= html_writer::tag('span', get_string('examinfo', 'quizaccess_conquizzer'), array('class'=>'h3'));
         $output .= html_writer::tag('hr','', array('class'=>'underlined'));
 
         //original call to functions
-        
-        //array_unshift($viewobj->infomessages,html_writer::tag('span', get_string('testdate', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timeopen, array('class'=>'span-content')),html_writer::tag('span', get_string('testopen', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $houropen, array('class'=>'span-content')),html_writer::tag('span', get_string('testduration', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timelimit, array('class'=>'span-content')));
         $viewobj->infomessages = ($quiz->timeopen != 0)  
-                                                ? array(html_writer::tag('span', get_string('testdate', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timeopen, array('class'=>'span-content')),html_writer::tag('span', get_string('testopen', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $houropen, array('class'=>'span-content')),html_writer::tag('span', get_string('testduration', 'quizaccess_conquizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timelimit, array('class'=>'span-content')))
-                                                : array(html_writer::tag('span', get_string('testduration', 'quizaccess_conquizzer'),array('class'=>'h6 strong centered red')).html_writer::tag('span', $timelimit, array('class'=>'span-content')));
+                                                ? array(html_writer::tag('span', get_string('testdate', 'theme_quizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timeopen, array('class'=>'span-content')),html_writer::tag('span', get_string('testopen', 'theme_quizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $houropen, array('class'=>'span-content')),html_writer::tag('span', get_string('testduration', 'theme_quizzer'), array('class'=>'h6 strong centered red')).html_writer::tag('span', $timelimit, array('class'=>'span-content')))
+                                                : array(html_writer::tag('span', get_string('testduration', 'theme_quizzer'),array('class'=>'h6 strong centered red')).html_writer::tag('span', $timelimit, array('class'=>'span-content')));
 
         //check to add attempts made
         $attemps = ($quiz->attempts == 0)?'Unlimited':$quiz->attempts;

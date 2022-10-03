@@ -313,6 +313,10 @@ nav {
     margin-bottom: 5rem;
 }
 
+.centered {
+    margin: 0 auto;
+}
+
 .col-3 {
     height: 35rem;
     border-color: $conu-burgundy !important;
@@ -396,10 +400,10 @@ body.mobiletheme {
 /************************* Restilyng the atto buttons **************************/
 
 div.editor_atto_toolbar {
-    background: #ced4da;
+    background: $gray-400;
     div.atto_group {
         border-radius: 0px;
-        border: 1px solid #ced4da;
+        border: 1px solid $gray-400;
         button {
             &:focus {
                 outline: 2px solid -webkit-focus-ring-color;
@@ -411,6 +415,29 @@ div.editor_atto_toolbar {
                 background-image: none;
                 .icon {
                     color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+/*********************** Restilyng the filepicker buttons **********************/
+
+div.attachments {
+    .filemanager-toolbar {
+        background-color: $gray-400;
+        .btn {
+            &.btn-secondary {
+                border-radius: 0;
+                color: $gray-800;
+                background-color: $white;
+                &.checked,
+                &.highlight,
+                &:hover {
+                    background-color: $conu-blue !important;
+                    color: $white;
+                    border: 1px solid $conu-blue;
                 }
             }
         }

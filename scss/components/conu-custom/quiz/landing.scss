@@ -13,9 +13,9 @@
         &#page-header {
             &.row {
                 display: block;
-                background-color: $conu-violet;
+                /*background-color: $conu-violet;
                 height: 100px;
-                margin: 0 -15px 0 -20px;
+                margin: 0 -15px 0 -20px;*/
                 .header-title {
                     color: $white;
                     font-family: "GillSansMTProMedium", sans-serif;
@@ -27,6 +27,16 @@
             }
         }
     }
+    #page-content {
+        .custom-landing-header {
+            font-size: 48px;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            padding-top: 25px;
+            border-bottom: 3px solid $conu-violet;
+        }
+    }
     .card-body {
         background-color: $conu-violet;
     }
@@ -36,27 +46,12 @@
     #maincontent {
         height: 5px;
     }
-    #main.h2 {
-        font-size: 48px;
-        margin-bottom: 4rem;
-        padding-top: 20px;
-    }
-    .col-3 {
-        border: 3px solid $conu-burgundy;
-        text-align: left;
-    }
     hr {
         border-top: 3px solid $conu-burgundy;
         border-radius: 2px;
     }
     label {
         display: inline;
-    }
-    h2,
-    .h2 {
-        font-size: 48px;
-        margin-bottom: 4rem;
-        text-align: center;
     }
     h3,
     .h3 {
@@ -197,5 +192,9 @@
                 }
             }
         }
+    }
+    object.proctorio-embed {
+        width: 100% !important;
+        min-width: 100%! important;
     }
 }

@@ -7,14 +7,20 @@ $conu-white-smoke:lighten($black, 94%) !default;
 
 /*********************Other concordia colors********************/
 
-$conu-blue: #0f6fc5 !default;
 $conu-purple: #613d7c !default;
 $conu-pink: #e83e8c !default;
 $conu-red: #ca3120 !default;
 $conu-orange: #f0ad4e !default;
 $conu-yellow: #ff7518 !default;
 $conu-green: #357a32 !default;
-$conu-cyan: #008196 !default;
+//$conu-blue: #0f6fc5 !default;
+//$conu-cyan: #008196 !default;*/
+
+/* Added new color definitions as found in Concordia's official color chart*/
+
+$conu-dark-blue: #004085 !default;
+$conu-blue : #0072a8 !default;
+$conu-cyan : #00adef !default;
 
 /*****************New colors for the question attempt*******************/
 
@@ -37,6 +43,7 @@ $conu-primary: $conu-red !default;
 $warning: $orange !default;
 $danger: $red !default;
 $secondary: $gray-400 !default;
+$conu-link: $conu-blue;
 
 /* SAML Button Color */
 
@@ -64,4 +71,3 @@ $alert-text: lighten($black, 17.3%);
 $button-burgundy: $conu-burgundy;
 $button-text: $white;
 $button-burgundy-hover: $conu-burgundy-secondary;
-
