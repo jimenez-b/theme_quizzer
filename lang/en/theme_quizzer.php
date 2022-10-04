@@ -101,6 +101,14 @@ $string['testattempts'] = 'Attempts allowed';
 /**
  * strings copied from conquizzer plugin to keep theme related stuff in the appropriate place
  */
+//modal text
+$string['copyright'] = "The present exam and the contents thereof are the property and copyright of the professor(s) who prepared this exam at Concordia University. No part of the present exam may be used for any purpose other than research or teaching purposes at Concordia University. Furthermore, no part of the present exam may be sold, reproduced, republished or re-disseminated in any manner or form without the prior written permission of its owner and copyright holder.";
+$string['termsandconditions'] = '<p>You are about to enter into an online exam environment. If you are taking a proctored exam, you must have your Concordia ID card or, failing that, government issued ID readily accessible.</p>
+<p>Before you access the exam, you must make sure that you meet all technological and logistical requirements. Read the FAQ about online exams without proctoring or the FAQ about online exams with proctoring, depending on the exam you are about to take. They contain important information and you are strongly encouraged to review that information prior to your exam.</p>
+<p>The academic integrity standards applicable to you during this exam are identical to those applicable in an in-person exam. If it is suspected that you did not respect those standards, you may be charged under the Academic Code of Conduct. It is your responsibility to ensure that you remove anything from your exam environment that can be perceived to be unauthorized materials during the exam. Material that you are allowed to use during the exam are mentioned above.</p>
+<p>By entering the exam, you represent and warrant that you are the person whose name is associated with the login used in COLE. You affirm that you have had the opportunity to review and that you understand the Academic Code of Conduct.</p>
+<p>If you require support during the exam, please call 1-888-202-8615 as soon as possible.</p>';
+
 //aside
 $string['support'] = "Support";
 $string['technicaldifficultieshdr'] = "Technical difficulty?";
