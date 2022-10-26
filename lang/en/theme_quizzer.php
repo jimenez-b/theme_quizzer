@@ -104,3 +104,7 @@ $string['modaltextextra'] = 'We are having difficulty closing your exam, please 
 
 //qr upload page 
 $string['qruploadmodaltext'] = 'This section of the exam has finished. In a few seconds you will be redirected to the exam start page where you will scan the QR code and upload your files.';
+
+//strings for the student toolbar setting
+$string['studenttoolbarconfig'] = 'Student Toolbar config';
+$string['toolbarconfig_desc'] = 'The list of plugins and the order they are displayed for students can be configured here. The configuration consists of groups (one per line) followed by the ordered list of plugins for that group. The group is separated from the plugins with an equals sign and the plugins are separated with commas. The group names must be unique and should indicate what the buttons have in common. Button and group names should not be repeated and may only contain alphanumeric characters.';
